@@ -1,23 +1,27 @@
-let quotes = [];
+let quotes=[];
 
-fetch('https://type.fit/api/quotes')
-    .then(response => response.json())
+fetch('quotes.json')
+    .then(response => {
+        if(!response.ok){
+            throw new Error('Network seemed to bug out')
+        }
+        return response.json();
+    })
     .then(data => {
         quotes=data;
     })
-    .catch(error =>{
-        console.error('Cant fetch quotes:', error);
-        document.getElementById('quote').textContent = "Couldn't load quotes.";
-});
+    .catch(error => {
+        console.error("Couldn't load quotes: ",error)
+        document.getElementById('quote').textContent="Couldn't load quotes!"
+    });
 
-function squawk(){
-    if(quotes.length>0){
-        const random= quotes[Math.floor(Math.random()* quotes.length)].text; //get quote's text from quotes array
-        document.getElementById('quote').textContent=random;
-        const audio=new Audio('squawk.mp3');
-        audio.play();
-    } else{
-        document.getElementById('quote').textContent="Crunchings quotes!!"
+    function squawk() {
+        if (quotes.length > 0) {
+            const random= quotes[Math.floor(Math.random()*quotes.length)].text;
+            document.getElementById('quote').textContent=random;
+            const audio=new Audio('squawk.mp3');
+            audio.play();
+        } else {
+            document.getElementById('quote').textContent="Crunching quotes!!"
+        }
     }
-    
-}
