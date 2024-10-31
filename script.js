@@ -25,3 +25,8 @@ fetch('quotes.json')
             document.getElementById('quote').textContent="Crunching quotes!!"
         }
     }
+
+const darkModeToggle= document.getElementById('dark-mode-toggle');
+darkModeToggle.onclick=()=> {
+    document.body.classList.toggle('dark-mode');
+};

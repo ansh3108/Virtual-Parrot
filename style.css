@@ -13,6 +13,9 @@
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    width: 150px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
 }
 
 #parrot{
@@ -40,9 +43,54 @@ button{
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s; 
 }
 
 button:hover{
     background-color: #ff7f50;
+}
+
+#parrot-container:active {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+#speech-bubble {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: fit-content;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #007b83;
+    margin: 20px auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90vw;
+    display: inline-block;
+}
+
+#speech-bubble:after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+
+body.dark-mode{
+    background-color: #2e2e2e;
+    color: #f4f4f9;
+}
+
+#speech-bubble.dark-mode{
+    background-color: #333;
+    color: #ffedc8;
 }
