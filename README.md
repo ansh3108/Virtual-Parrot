@@ -4,6 +4,12 @@ This project displays a parrot that, when clicked will throw out a motivational 
 
 ### Preview
 
+
+
+https://github.com/user-attachments/assets/b74318f6-6058-4324-b199-332529e923ce
+
+
+
 ## 📂 Project Structure
 
 ```plaintext
