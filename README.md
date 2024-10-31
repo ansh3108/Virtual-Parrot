@@ -13,6 +13,8 @@ This project displays a parrot that, when clicked will throw out a motivational 
 ├── script.js            # JavaScript for functionality
 └── quotes.json          # Local file containing motivational quotes
 
+```
+
 # 🛠️ Customization
 
 - Quotes: Add more quotes in `quotes.json` file.
