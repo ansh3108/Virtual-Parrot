@@ -2,7 +2,7 @@
 
 This project displays a parrot that, when clicked will throw out a motivational quote. The quotes are stored locally in `quotes.json` file.
 
-###Preview
+### Preview
 
 ## 📂 Project Structure
 
