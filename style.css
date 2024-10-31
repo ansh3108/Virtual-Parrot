@@ -5,4 +5,14 @@
     margin-top: 50px;
 }
 
-#parrot{}
+#parrot{
+    cursor: pointer;
+    width: 200px;
+}
+
+#quote{
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #4b9cd3
+}
