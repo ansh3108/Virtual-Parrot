@@ -13,11 +13,11 @@ fetch('https://type.fit/api/quotes')
 function squawk(){
     if(quotes.length>0){
         const random= quotes[Math.floor(Math.random()* quotes.length)].text; //get quote's text from quotes array
-        document.getElementById('quote').textContent=randomQuote;
+        document.getElementById('quote').textContent=random;
         const audio=new Audio('squawk.mp3');
         audio.play();
     } else{
-        document.getElementById('quote').textContent="Crunching more quotes!!"
+        document.getElementById('quote').textContent="Crunchings quotes!!"
     }
     
 }
