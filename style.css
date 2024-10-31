@@ -70,6 +70,7 @@ button:hover{
     text-overflow: ellipsis;
     max-width: 90vw;
     display: inline-block;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
 }
 
 #speech-bubble:after{
@@ -93,4 +94,8 @@ body.dark-mode{
 #speech-bubble.dark-mode{
     background-color: #333;
     color: #ffedc8;
+}
+
+#speech-bubble:after{
+    content: ;
 }
